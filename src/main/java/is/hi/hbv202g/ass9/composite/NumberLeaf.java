@@ -11,4 +11,5 @@ public class NumberLeaf implements MathExpression {
     public int getResult() {
         return value;
     }
+    
 }
