@@ -7,15 +7,7 @@ public class PlusComposite {
         this.value = value;
     }
 
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
     public void add(PlusComposite composite) {
-        this.value += composite.getValue();
+        this.value += NumberLeaf.getValue(composite);
     }
 }
