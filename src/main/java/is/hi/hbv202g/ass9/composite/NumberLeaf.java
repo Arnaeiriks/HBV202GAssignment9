@@ -1,15 +1,15 @@
 package is.hi.hbv202g.ass9.composite;
 
 public class NumberLeaf {
-    private int value;
+    private int values;
 
     public int getValue() {
-        return value;
+        return values;
     }
 
     public int setValue(int value) {
-        this.value = value;
+        this.values = value;
         return value;
     }
-    
+
 }
