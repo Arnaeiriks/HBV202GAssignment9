@@ -1,13 +1,28 @@
 package is.hi.hbv202g.ass9.composite;
 
-public class PlusComposite {
-    private int value;
+import java.util.ArrayList;
+import java.util.List;
 
-    public PlusComposite(int value) {
-        this.value = value;
+public class PlusComposite {
+    private List<MathExpression> children = new ArrayList<MathExpression>();
+
+    public int getResult() {
+        int result = 0;
+        for (MathExpression child : children) {
+            result += child.getResult();
+        }
+        return result;
     }
 
-    public void add(PlusComposite composite) {
-        this.value += NumberLeaf.getValue(composite);
+    public void add(MathExpression expression) {
+        children.add(expression);
+    }
+
+    public void remove(MathExpression expression) {
+        children.remove(expression);
+    }
+
+    public List<MathExpression> getChildren() {
+        return children;
     }
 }
