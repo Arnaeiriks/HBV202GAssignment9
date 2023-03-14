@@ -5,19 +5,27 @@ import java.util.List;
 
 public class MultiplyComposite implements MathExpression {
 
-    private NumberLeaf value;
-    private List<MathExpression> children = new ArrayList<MathExpression>();
 
+    private List<MathExpression> children = new ArrayList<MathExpression>();
 
     @Override
     public int getResult() {
-        return value;
+        int result = 0;
+        for (MathExpression child : children) {
+            result += child.getResult();
+        }
+        return result;
     }
-    public MultiplyComposite (int value) {
-        this.value = value
-
-
+    public void add(MathExpression expression) {
+        children.add(expression);
     }
 
+    public void remove(MathExpression expression) {
+        children.remove(expression);
+    }
+
+    public List<MathExpression> getChildren() {
+        return children;
+    }
 
 }
