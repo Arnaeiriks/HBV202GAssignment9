@@ -10,22 +10,14 @@ public class MultiplyComposite implements MathExpression {
 
     @Override
     public int getResult() {
-        int result = 0;
+        int result = 1;
         for (MathExpression child : children) {
-            result += child.getResult();
+            result *= child.getResult();
         }
         return result;
     }
     public void add(MathExpression expression) {
         children.add(expression);
-    }
-
-    public void remove(MathExpression expression) {
-        children.remove(expression);
-    }
-
-    public List<MathExpression> getChildren() {
-        return children;
     }
 
 }

@@ -18,11 +18,4 @@ public class PlusComposite implements MathExpression {
         children.add(expression);
     }
 
-    public void remove(MathExpression expression) {
-        children.remove(expression);
-    }
-
-    public List<MathExpression> getChildren() {
-        return children;
-    }
 }
