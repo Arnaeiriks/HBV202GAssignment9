@@ -14,7 +14,7 @@ public class MultiplyComposite implements MathExpression {
         return value;
     }
     public MultiplyComposite (int value) {
-        this.value = value;
+        this.value = value
 
 
     }
